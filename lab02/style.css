@@ -1,0 +1,24 @@
+html {
+  background-color: #264653;
+  border-style: dashed solid;
+  height: auto;
+  width: 50%;
+  margin: auto;
+  display: inline-block;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+button {
+  background-color: #0de789;
+  border: black;
+  color: #3e4e50;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+img {
+  width: 50%;
+  -webkit-box-reflect: right;
+}
