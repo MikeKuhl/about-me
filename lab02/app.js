@@ -50,10 +50,15 @@ document.getElementById("test").addEventListener("click", function () {
   //   alert(`Thank you for your time ${name}. Please come back again!`);
   // }
   let attempts = 0;
-
-  while (attempts > 4) {
-    prompt("How many children does Mark Zuckerberg have?");
+  var kids = prompt("How many children does Mark Zuckerberg have?");
+  while (attempts < 4) {
+    kids();
     attempts++;
   }
+  var guessingGame = prompt("Which number is my favorite?");
+  var numList = [];
+  numbers.forEach(function (obj) {
+    numList.push(obj.numbers);
+  });
+  alert(a);
 });
-function guessingGame() {}
