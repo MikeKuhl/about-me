@@ -1,13 +1,20 @@
+.parent {
+  width: clamp(23ch, 50%, 46ch);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+}
+
 html {
   background-color: #264653;
   border-style: dashed solid;
-  height: 100%;
-  width: 50%;
+  height: 50%;
+  width: 25%;
   margin: 20%;
   display:table;
   border-width: 5px;
   /* box-sizing: border-box; */
   box-sizing: content-box;
+  place-items: center;
 }
 button {
   background-color: #0de789;
@@ -17,10 +24,22 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
 }
 
 img {
   width: 50%;
   -webkit-box-reflect: right;
+}
+
+ol {
+  color: #0de789;
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
 }
