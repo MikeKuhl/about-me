@@ -5,10 +5,14 @@ body {
   border-style: dashed solid;
   height: 75%;
   width: 25%;
-  margin: 35%;
+  margin-top: 5%;
+  margin-bottom: 30px;
+  margin-left: 35%;
+  margin-right: 35%;
   border-width: 5px;
   place-items: center;
 }
+
 button {
   background-color: #0de789;
   border: black;
@@ -21,8 +25,14 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+.zuc {
+  border: white solid 2px;
+  padding: 5px;
+  }
 
-
+div{
+  padding: 5px;
 }
 
 #frogge {
@@ -43,4 +53,15 @@ ol {
 
 #theHead {
 font-size: 40px;
+padding: 5px;
+text-align: center;
+}
+
+#top10 {
+  text-align: center;
+  padding: 10px;
+}
+
+#top10 ol {
+  padding: 2px;
 }
