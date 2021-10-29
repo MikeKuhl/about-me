@@ -1,7 +1,7 @@
 
 
 body {
-  background-color: #264653;
+  background-color: #001219;
   border-style: dashed solid;
   height: 75%;
   width: 25%;
@@ -14,9 +14,9 @@ body {
 }
 
 button {
-  background-color: #0de789;
-  border: black;
-  color: #3e4e50;
+  background-color: #e76f51;
+  border: #1D3557;
+  color: #001219;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -27,7 +27,7 @@ button {
   left: 50%;
 }
 .zuc {
-  border: white solid 2px;
+  border: #AE2012 solid 2px;
   padding: 5px;
   }
 
@@ -37,16 +37,18 @@ div{
 
 #frogge {
   width: 50%;
+  height: 50%;
   -webkit-box-reflect: right;
 }
 
 #zuck {
   width: 50%;
+  height: 50%;
   -webkit-box-reflect: right;
 }
 
 ol {
-  color: #0de789;
+  color: #E9D8A6;
   display: grid;
   grid-template: auto 1fr auto / auto 1fr auto;
 }
