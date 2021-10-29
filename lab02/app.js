@@ -1,19 +1,34 @@
 "use strict";
 let score = 0;
+// let greeting = prompt("What is your name?");
+function hello(greeting){
+  if (greeting === null) {
+    alert("Not there? Bye!");
+  }else{
+  let name = greeting.toUpperCase();
+  alert("Well Hello " + name);
+  console.log("Greeting " + name);
+  }
+}
+hello(greeting);
+
+
+
 
 function guessingGame() {
-  alert(
-    "Here is a list of cars!" + "mazda",
-    "bmw",
-    "subaru",
-    "porsche",
-    "honda",
-    "lexus",
-    "toyota",
-    "chrysler",
-    "buick",
-    "Hyundai"
-  );
+  // alert(
+  //   "Here is a list of cars!",
+    // "mazda",
+    // "bmw",
+    // "subaru",
+    // "porsche",
+    // "honda",
+    // "lexus",
+    // "toyota",
+    // "chrysler",
+    // "buick",
+    // "Hyundai"
+  // );
   var cars = [
     "mazda",
     "bmw",
@@ -27,42 +42,37 @@ function guessingGame() {
     "Hyundai",
   ];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 5; i++) {
     var carAnswer = prompt("Now can you guess my car??");
-
-    for (let j = 0; j < cars.length; j++) {
-      if (carAnswer === cars[j]) {
-        alert("Correct!");
-        score++;
-        i = 3;
-        break;
-        console.log(carAnswer);
-      }
-    }
-    if (i !== 3) {
+    if (carAnswer === cars[3]) {
+      alert("Correct!");
+      score++;
+      i = 5;
+      alert(`Thank you for your time ${greeting}. Please come back again!`);
+      break;
+      console.log(carAnswer);
+      }else{
       alert("Incorrect");
+      i++;
       console.log(carAnswer);
     }
-
-    alert(`Thank you for your time ${greeting}. Please come back again!`);
   }
-  alert(`${greeting} yo got a ${score}`);
 }
 
 // function gameStart() {
-document.getElementById("test").addEventListener("click", function () {
-  let greeting;
-  while (!greeting) {
-    greeting = prompt("What is your name?");
-    if (greeting === null) {
-      alert("Not there? Bye!");
-      break;
-    }
-    let name = greeting.toUpperCase();
-    alert("Well Hello " + name);
-    console.log("Greeting" + name);
+// 
 
-    var who = prompt(
+function questionStart(){
+  let score = 0;
+  let array = [question1(), question2(), question3(), question4(), question5(), guessingGame()]
+  console.log(score);
+  {
+    alert(`You scored ${score} out of 5`);
+  }
+}
+
+function question1(){
+  var who = prompt(
       "Is Mark Zuckerberg a American media magnate, internet entrepreneur, and philanthropist who co-founded Facebook?"
     );
     who.toLowerCase();
@@ -72,6 +82,9 @@ document.getElementById("test").addEventListener("click", function () {
     } else {
       alert("No you are wrong facebook is life!");
     }
+}
+
+function question2(){
     var where = prompt("Did Mr. Mark Duckerberg attend Harvard?");
     where.toLowerCase();
     if (where === "yes" || where === "y") {
@@ -80,7 +93,9 @@ document.getElementById("test").addEventListener("click", function () {
     } else {
       alert(`No, no, ${name} you are wrong. Facebook is still life!`);
     }
+}
 
+function question3(){
     var money = prompt("Was Mark Zuckerberg a millionaire by age 23?");
     money.toLowerCase();
     if (money === "yes" || money === "y") {
@@ -89,7 +104,9 @@ document.getElementById("test").addEventListener("click", function () {
     } else {
       alert(`No, no, ${name} you are wrong. Facebook is still life!`);
     }
+}
 
+function question4(){
     var forbes = prompt("Has Mr.Zuckerberg appeared in Forbes Magazine?");
     forbes.toLowerCase();
     if (forbes === "yes" || forbes === "y") {
@@ -101,30 +118,28 @@ document.getElementById("test").addEventListener("click", function () {
       alert(`No, no, ${name} you are wrong. Facebook is still life!`);
     }
   }
-  let attempts = 0;
 
-  while (attempts > 4) {
-    var kids = prompt("How many children does Mark Zuckerberg have?");
-    if (kids === 2) {
+function question5(){
+  let attempts = 0;
+  while (attempts < 4) {
+    var kids = parseInt(prompt("How many children does Mark Zuckerberg have?"));
+      if (kids === 2) {
       alert("Correct!");
       console.log(kids);
-      attempts++;
-    } else if (kids < 2) {
+      score++;
+      attempts = 4;
+      break;
+    } else if (kids > 2) {
       alert("Too many");
       attempts++;
       console.log(kids);
-    } else if (kids >= 1) {
+    } else if (kids < 2) {
       alert("Too little");
       attempts++;
       console.log(kids);
     }
   }
+}
 
-  score++;
-  console.log(score);
-  {
-    guessingGame();
-  }
-});
 
 // gameStart();
