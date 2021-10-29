@@ -108,18 +108,15 @@ function question5() {
     var kids = parseInt(prompt("How many children does Mark Zuckerberg have?"));
     if (kids === 2) {
       alert("Correct!");
-      console.log(kids);
       score++;
       attempts = 4;
       break;
     } else if (kids > 2) {
       alert("Too many");
       attempts++;
-      console.log(kids);
     } else if (kids < 2) {
       alert("Too little");
       attempts++;
-      console.log(kids);
     }
   }
 }
